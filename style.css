@@ -1,0 +1,122 @@
+body {
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+.wrapper {
+	display: table;
+	width: 100%;
+	min-height: 100vh;
+}
+
+.wrapper > aside {
+	display: table-cell;
+	position: relative;
+	overflow: hidden;
+}
+
+.wrapper > aside header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 10px;
+	background-color: rgba(0,0,0,0.1);
+	height: 40px;
+	z-index: 1;
+}
+
+.wrapper > aside .content {
+	padding-top: 40px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100%;
+}
+
+.sidebar {
+	width: 50px;
+	background-color: rgba(0,0,0,0.2);
+	transition: width 0.5s;
+}
+
+ul.categories {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+ul.categories li a {
+	width: 100%;
+	height: 50px;
+	padding: 10px;
+	text-align: center;
+	line-height: 30px;
+	white-space: nowrap;
+	text-transform: capitalize;
+	font-size: 0;
+	display: block;
+}
+
+ul.categories li a .icon {
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	background-color: blue;
+	vertical-align: middle;
+	margin: 0 5px;
+}
+
+ul.categories li a .text {
+	overflow: hidden;
+	width: 0;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 14px;
+	transition: width 0.5s
+}
+
+ul.categories li ul.dropdown {
+	margin: 0;
+	list-style: none;
+	overflow: hidden;
+	height: 0;
+	transition: height 0.5s;
+}
+
+ul.categories li ul.dropdown li a {
+	display: block;
+	font-size: 14px;
+}
+
+aside.container .content {
+	padding: 55px 15px 15px;
+	overflow-y: auto;
+	height: 100vh;
+}
+
+.example-content {
+	background-color: rgba(0,0,0,0.1);
+	width: 100%;
+	height: 200vh;
+}
+
+ul.categories li ul.dropdown.open {
+	height: 150px;
+}
+
+.sidebar.open {
+	width: 160px;
+}
+
+.sidebar.open ul.categories li a .text {
+	width: calc(100% - 30px);
+}
